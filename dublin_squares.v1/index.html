@@ -1,0 +1,517 @@
+<html>
+
+<head>
+    <title>Dublin Squares Trial</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/smooth.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="css/indexDesktop.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+
+<body>
+    <!--
+        <!-- Home Page  
+        <div data-role="page" id="splash">
+         
+            <div role="main">
+            <div class="box"></div>
+            <div class="boxD"></div>
+                <ul class="text-animation hidden">
+                    <li>D</li> 
+                    <li>U</li>
+                    <li>B</li>
+                    <li>L</li>
+                    <li>I</li>
+                    <li>N</li>
+                    <li></li>
+                    <li>S</li>
+                    <li>Q</li>
+                    <li>U</li>
+                    <li>A</li>
+                    <li>R</li>
+                    <li>E</li>
+                    <li>S</li>
+                </ul>
+       
+        
+            </div>
+      
+        </div>
+        -->
+
+
+
+    <div data-role="page" id="home">
+
+        <div id="menuwrapper">
+            <ul id="sidemenu">
+                <li><a class="ion-ios7-arrow-back noflyout" href="#" data-rel="back"></a></li>
+                <li><a class="ion-ios7-home" href="#"></a>
+                    <ul>
+                        <li id="container1">
+                            <div class="btn-group">
+                                <button id="northBtn" data-inline="true">N</button>
+                                <button id="southBtn" data-inline="true">S</button>
+                                <button id="eastBtn" data-inline="true">E</button>
+                                <button id="westBtn" data-inline="true">W</button>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="ion-information-circled" href="#"></a>
+                    <ul>
+                        <li> Container 2
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="ion-ios7-gear noflyout selected" href="#" onclick="goMerrionGeneral()"></a></li>
+            </ul>
+        </div>
+
+        <div role="main" class="ui-content">
+
+            <!--<div id="imageMapMerrion"></div>-->
+            <img src="img/image-map-ipad1.png" usemap="#merrionmap">
+
+            <map name="merrionmap">
+                    <area shape="poly" coords="697, 66, 948, 219, 868, 347, 620, 203" onclick="goMerrion()"> 
+					
+					<!-- <area shape="poly" coords="739,76,996,233,915,368,662,212" onclick="goMerrion()">-->
+                </map>
+        </div>
+
+    </div>
+
+
+    <div data-role="page" id="birdsEyeMerrion">
+
+
+        <div id="menuwrapper">
+            <ul id="sidemenu">
+                <li><a class="ion-ios7-arrow-back noflyout" href="#" data-rel="back"></a></li>
+                <li><a class="ion-ios7-home" href="#"></a>
+                    <ul>
+                        <li id="container1">
+
+                            <div class="btn-group">
+                                <button id="northBtn" data-inline="true">N</button>
+                                <button id="southBtn" data-inline="true">S</button>
+                                <button id="eastBtn" data-inline="true">E</button>
+                                <button id="westBtn" data-inline="true">W</button>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="ion-ios7-gear" href="#"></a>
+                    <ul>
+                        <li> Container 2
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="ion-information-circled noflyout selected" href="#" onclick="goMerrionGeneral()"></a></li>
+            </ul>
+        </div>
+
+        <div role="main" class="ui-content">
+            <img src="img/birdsEyeViewMerrion.png" usemap="#birdsEyeViewM">
+
+            <map name="birdsEyeViewM">			
+					<area shape="rect" coords="128, 145, 268, 377" onclick="goWestMerrion()">
+                </map>
+
+        </div>
+    </div>
+
+
+    <div data-role="page" id="westStreet">
+
+
+        <div id="menuwrapper">
+            <ul id="sidemenu">
+                <li><a class="ion-ios7-arrow-back noflyout" href="#" data-rel="back"></a></li>
+                <li><a class="ion-ios7-home" href="#"></a>
+                    <ul>
+                        <li id="container1">
+
+                            <div class="btn-group">
+                                <button id="northBtn" data-inline="true">N</button>
+                                <button id="southBtn" data-inline="true">S</button>
+                                <button id="eastBtn" data-inline="true">E</button>
+                                <button id="westBtn" data-inline="true">W</button>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="ion-ios7-gear" href="#"></a>
+                    <ul>
+                        <li> Container 2
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="ion-information-circled noflyout selected" href="#" onclick="goMerrionGeneral()"></a></li>
+            </ul>
+        </div>
+
+        <div role="main" class="ui-content">
+            <img src="img/merrionSquareWest_1.png" usemap="#number_91">
+
+            <map name="number_91">
+                    <!-- <area shape="poly" coords="993,117,902,282,1217,476,1317,311" onclick="goMerrion()"> -->
+					
+					<area shape="rect" coords="510, 255 593, 499" onclick="goNumber91()">
+                    <area shape="rect" coords="598, 255, 677, 498" onclick="goNumber92()">
+
+                </map>
+
+
+        </div>
+    </div>
+
+
+
+    <!--  <div data-role="page" id="merrionSquare">
+            <div role="main" class="ui-content"> 
+                <h1>Merrion</h1>
+            </div>
+            <div data-role="footer" data-position="fixed" style="overflow:hidden;" >
+                <div data-role="navbar">
+                    <button class="btn btn-primary" data-toggle="popover" >Button</button>
+                    
+                  <!-- <ul>
+                        <li><a href="#" class="ui-btn-active">One</a></li>
+                        <li><a href="#">Two</a></li>
+                    </ul> --/>
+                </div>
+            </div>
+        </div> -->
+
+
+
+    <div data-role="page" id="number91">
+
+        <a href="#" class="backBtn" data-rel="back" position="fixed"></a>
+
+        <div role="main" class="ui-content">
+            <div id="page-wrap">
+                <div id="content">
+                    <div class="container row">
+                        <aside class="three columns sidenav">
+                            <div class="side-content">
+                                <div class="smenu-title"></div>
+                                <ul class="smenu-links">
+                                    <li><a href="#91two">House</a></li>
+                                    <li>
+                                        <a href="#91three">Family</a>
+                                    </li>
+                                    <li>
+                                        <a href="#91four">Stories</a>
+                                    </li>
+                                    <li>
+                                        <a href="#91five">Other</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+
+                        <div class="eight columns contents">
+
+                            <div class="content-text">
+                                <h1 id="91top">Merrion Square Number 91</h1>
+                                <div id="imgHouse91"></div>
+
+                                <h2 id="91one"></h2>
+
+                                <div id="91_intro"></div>
+
+
+                                <h2 id="91two">House</h2>
+
+                                <p><a href="#91top">Top</a></p>
+                                <div id="91_house"></div>
+
+                                <h2 id="91three">Family</h2>
+
+                                <p><a href="#91top">Top</a></p>
+                                <div id="91_family"></div>
+
+
+                                <h2 id="91four">Stories</h2>
+
+                                <p><a href="#91top">Top</a></p>
+
+                                <div role="main" class="ui-content">
+
+                                    <div class="timeline">
+
+                                        <ul>
+                                            <li>
+                                                <div id='timeline91_1'>
+                                                    <div id="time91_1"></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div id='timeline91_2'>
+                                                    <div id="time91_2"></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div id='timeline91_3'>
+                                                    <div id="time91_3"></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div id='timeline91_4'>
+                                                    <div id="time91_4"></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div id='timeline91_5'>
+                                                    <div id="time91_5"></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div id='timeline91_6'>
+                                                    <div id="time91_6"></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div id='timeline91_7'>
+                                                    <div id="time91_7"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                    <script>
+
+
+                                    </script>
+                                </div>
+
+
+                                <h2 id="91five"></h2>
+
+                                <p><a href="#91top">Top</a></p>
+                                <div id="91_conclude"></div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div data-role="page" id="number92">
+
+        <a href="#" class="backBtn" data-rel="back" position="fixed"></a>
+
+        <div role="main" class="ui-content">
+            <div id="page-wrap">
+                <div id="content">
+
+                    <div class="container row">
+                        <aside class="three columns sidenav">
+                            <div class="side-content">
+                                <div class="smenu-title">
+                                    <h3>Number 92</h3>
+                                </div>
+                                <ul class="smenu-links">
+                                    <li><a href="#92two">House</a></li>
+                                    <li>
+                                        <a href="#92three">Family</a>
+                                    </li>
+                                    <li>
+                                        <a href="#92four">Stories</a>
+                                    </li>
+                                    <li>
+                                        <a href="#92five">Other</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                        <div class="eight columns contents">
+
+                            <div class="content-text">
+                                <h2 id="92top"></h2>
+                                <div id="imgHouse92_1"></div>
+
+
+                                <h2 id="92one"></h2>
+                                <div id="92_intro"></div>
+
+
+                                <h2 id="92two">House</h2>
+
+                                <p><a href="#92top">Top</a></p>
+                                <div id="92_house"></div>
+
+                                <div id="imgHouse92_2"></div>
+                                <!--<img src="img/number92.png"/> -->
+
+
+                                <h2 id="92three">Family</h2>
+
+                                <p><a href="#92top">Top</a></p>
+
+                                <div id="92_family1"></div>
+
+
+                                <div id="imgHouse92_3"></div>
+                                <!--<img src="img/Sir%20Lambert%20Hepenstal%20Ormsby.jpg"/> -->
+                                <div id="imgHouse92_4"></div>
+                                <!-- <img src="img/SirLambertOrmsby.JPG" /> -->
+
+                                <div id="92_family2"></div>
+
+
+                                <h2 id="92four">Stories</h2>
+
+                                <p><a href="#92top">Top</a></p>
+
+                                <div role="main" class="ui-content">
+
+                                    <div class="timeline">
+
+                                        <ul>
+                                            <li>
+                                                <div id='timeline92_1'>
+                                                    <div id="time92_1"></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div id='timeline92_2'>
+                                                    <div id="time92_2"></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div id='timeline92_3'>
+                                                    <div id="time92_3"></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div id='timeline92_4'>
+                                                    <div id="time92_4"></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div id='timeline92_5'>
+                                                    <div id="time92_5"></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div id='timeline92_6'>
+                                                    <div id="time92_6"></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div id='timeline92_7'>
+                                                    <div id="time92_7"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <h2 id="92five"></h2>
+
+                                <p><a href="#92top">Top</a></p>
+                                <div id="92_conclude"></div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div data-role="page" id="homeGeneralMerrion">
+
+
+        <div role="main" class="ui-content">
+
+            <h1>Some interesting placeholder text here!!</h1>
+            <h3>by Someone of Interest</h3>
+
+            <a class="discover" href="#merrionGeneral" data-role="button" data-mini="true" data-inline="true" onclick="goMerrionGeneral2()">Discover</a>
+        </div>
+    </div>
+
+
+    <div data-role="page" id="merrionGeneral">
+
+        <div role="main" class="ui-content">
+            <div class="row">
+                <div class="column">
+                    <a href="#thePark">
+                            <img src="img/Oscar_Wilde2.jpg" alt="Park" style="width:100%">
+                          <h3>The Park</h3>
+                          </a>
+                </div>
+                <div class="column">
+                    <a href="#theStatues">
+                            <img src="img/Oscar_Wilde2.jpg" alt="Statues" style="width:100%">
+                          <h3>The Something Else</h3>
+                        </a>
+                </div>
+                <div class="column">
+                    <a href="#theFamous">
+                            <img src="img/Oscar_Wilde2.jpg" alt="Famous" style="width:100%">
+                          <h3>The Something Else</h3>
+                        </a>
+                </div>
+                <div class="column">
+                    <a href="#theBlah">
+                            <img src="img/Oscar_Wilde2.jpg" alt="blah" style="width:100%">
+                          <h3>The Something Else</h3>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="thePark">
+
+        <h1>Lorem Ipsum 1</h1>
+
+    </div>
+
+    <div data-role="page" id="theStatues">
+
+        <h1>Lorem Ipsum 2</h1>
+
+    </div>
+
+    <div data-role="page" id="theFamous">
+
+        <h1>Lorem Ipsum 3</h1>
+
+    </div>
+
+    <div data-role="page" id="theBlah">
+
+        <h1>Lorem Ipsum 4</h1>
+
+    </div>
+
+</body>
+
+</html>
